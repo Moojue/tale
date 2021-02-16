@@ -288,7 +288,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 .bg-grey {
-    background-color: #f7f7f7 !important
+    background-color: #c0c4cc !important
 }
 
 .bg-deepgrey {
@@ -521,6 +521,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 .navbar-menu a {
     font-size: 20px;
+    font-weight: bold;
     padding: 0 15px
 }
 
@@ -681,7 +682,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     height: 66px;
     padding: 0 40px 0 18px;
     color: #313131;
-    border: 1px solid #eb5055;
+    border: 2px solid #1d1c1c;
     border-radius: 20px;
     outline: 0;
     background-color: #fff;
@@ -731,12 +732,21 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     border-radius: 3px;
     background-color: #fff;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .04)
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+    transition: All 0.4s ease-in-out;
+    -webkit-transition: All 0.4s ease-in-out;
+    -moz-transition: All 0.4s ease-in-out;
+    -o-transition: All 0.4s ease-in-out
 }
 
 .post-list-item-container:hover {
     -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, .1)
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1)
 }
 
 .post-list-item-container .item-thumb {
@@ -1971,6 +1981,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 .footer-meta .meta-title {
     font-size: 14px;
+    font-weight: bold;
     padding: 0 0 10px 0;
     text-decoration: none;
     color: #5f5f5f
@@ -2390,4 +2401,28 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
         -webkit-transform: translateY(0);
         opacity: 1
     }
+}
+
+/*小鱼动态效果背景色*/
+.container {
+    background: #373a47;
+}
+
+/*小猫Top*/
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    right: 80px;
+    top: -900px;
+    z-index: 2;
+    width: 70px;
+    height: 900px;
+    background: url(../img/scroll.png);
+    transition: all .5s ease-in-out;
+    opacity: 1;
+}
+
+.faa-float.animated, .faa-float.animated-hover:hover, .faa-parent.animated-hover:hover>.faa-float {
+    -webkit-animation: float 2s linear infinite;
+    animation: float 2s linear infinite;
 }

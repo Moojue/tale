@@ -1,7 +1,7 @@
 #macro pageNav(pageInfo, prevText, nextText, prefix)
 <ol class="page-navigator">
     #if(pageInfo.hasPrevPage)
-    <li class="prev"><a href="/${prefix}/${pageInfo.prevPage}">${prevText}</a></li>
+    <li class="prev"><a href="/${prefix}/${pageInfo.prevPage}">上一页</a></li>
     #end
 
     #for(navIndex : pageInfo.navPageNums)
@@ -9,7 +9,7 @@
     #end
 
     #if(pageInfo.hasNextPage)
-    <li class="next"><a href="/${prefix}/${pageInfo.nextPage}">${nextText}</a></li>
+    <li class="next"><a href="/${prefix}/${pageInfo.nextPage}">下一页</a></li>
     #end
 </ol>
 #end
