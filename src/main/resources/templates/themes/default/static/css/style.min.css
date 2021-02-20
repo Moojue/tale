@@ -723,7 +723,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     padding: 15px;
     align-items: center
 }
-
+/*div hover放大缩小*/
 .post-list-item-container {
     position: relative;
     overflow: hidden;
@@ -733,10 +733,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     background-color: #fff;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
     box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
-    transition: All 0.4s ease-in-out;
-    -webkit-transition: All 0.4s ease-in-out;
-    -moz-transition: All 0.4s ease-in-out;
-    -o-transition: All 0.4s ease-in-out
+    transition: All 0.25s ease-in-out;
+    -webkit-transition: All 0.25s ease-in-out;
+    -moz-transition: All 0.25s ease-in-out;
+    -o-transition: All 0.25s ease-in-out
 }
 
 .post-list-item-container:hover {
@@ -1152,7 +1152,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .post-tags {
     margin: 0;
     padding: 5px 0 15px;
-    border-bottom: 1px solid #e0e0e0
+    border-bottom: 2px solid #4f4242
 }
 
 .post-tags a {
@@ -1225,7 +1225,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     padding: 25px 20px 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
-    border-top: 1px solid #e0e0e0
+    border-top: 2px solid #f6f6f6
 }
 
 .related-post-lists {

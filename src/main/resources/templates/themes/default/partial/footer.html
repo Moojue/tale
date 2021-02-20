@@ -29,8 +29,8 @@
                     "opacityOnHover": 0.2
                 }
             });
-            window.onload = function(){
-                $("#live2dcanvas").attr("style","position: fixed; opacity: 0.7; left: 70px; bottom: 0px; z-index: 1; pointer-events: none;")
+            window.onload = function () {
+                $("#live2dcanvas").attr("style", "position: fixed; opacity: 0.7; left: 70px; bottom: 0px; z-index: 1; pointer-events: none;")
             }
         </script>
         <!--小鱼动效-->
@@ -38,8 +38,8 @@
         <script src="/static/admin/js/fish.js"></script>
 
         <!--雨滴动效-->
-<!--        <canvas id="canvas-club"></canvas>
-        <script type="text/javascript" src="/static/admin/js/raindrop.js"></script>-->
+        <!--        <canvas id="canvas-club"></canvas>
+                <script type="text/javascript" src="/static/admin/js/raindrop.js"></script>-->
 
     </div>
 
@@ -48,7 +48,8 @@
             <div class="meta-item meta-copyright">
                 <div class="meta-copyright-info">
                     <div align="center">
-                        <a href="${site_url()}" class="info-logo"><img src="/templates/themes/default/static/img/logo.png" alt="${site_title()}"></a>
+                        <a href="${site_url()}" class="info-logo"><img
+                                src="/templates/themes/default/static/img/logo.png" alt="${site_title()}"></a>
                     </div>
                     <div class="info-text">
                         <!--<p>一生有所追求.</p>-->
@@ -86,7 +87,7 @@
 </div>
 <script>
     $('#directory').html('');
-    var postDirectoryBuild = function() {
+    var postDirectoryBuild = function () {
         var postChildren = function children(childNodes, reg) {
                 var result = [],
                     isReg = typeof reg === 'object',
@@ -96,19 +97,19 @@
                     node = childNodes[i];
                     if ((node.nodeType === 1 || node.nodeType === 9) &&
                         (!reg ||
-                        isReg && reg.test(node.tagName.toLowerCase()) ||
-                        isStr && node.tagName.toLowerCase() === reg)) {
+                            isReg && reg.test(node.tagName.toLowerCase()) ||
+                            isStr && node.tagName.toLowerCase() === reg)) {
                         result.push(node);
                     }
                 }
                 return result;
             },
-            createPostDirectory = function(article, directory, isDirNum) {
+            createPostDirectory = function (article, directory, isDirNum) {
                 var contentArr = [],
                     titleId = [],
                     levelArr, root, level,
                     currentList, list, li, link, i, len;
-                levelArr = (function(article, contentArr, titleId) {
+                levelArr = (function (article, contentArr, titleId) {
                     var titleElem = postChildren(article.childNodes, /^h\d$/),
                         levelArr = [],
                         lastNum = 1,
@@ -165,13 +166,13 @@
                     link = document.createElement('a');
                     link.href = '#' + titleId[i];
                     link.innerHTML = !isDirNum ? contentArr[i] :
-                        dirNum.join('.') + ' ' + contentArr[i] ;
+                        dirNum.join('.') + ' ' + contentArr[i];
                     li.appendChild(link);
                     currentList.appendChild(li);
                 }
                 directory.appendChild(root);
             };
-        createPostDirectory(document.getElementById('post-content'),document.getElementById('directory'), true);
+        createPostDirectory(document.getElementById('post-content'), document.getElementById('directory'), true);
     };
     postDirectoryBuild();
 </script>
@@ -182,19 +183,19 @@
     hljs.initHighlightingOnLoad();
 
     #if(is_post)
-        var postDirectory = new Headroom(document.getElementById("directory-content"), {
-            tolerance: 0,
-            offset : 100,
-            classes: {
-                initial: "initial",
-                pinned: "pinned",
-                unpinned: "unpinned"
-            }
-        });
+    var postDirectory = new Headroom(document.getElementById("directory-content"), {
+        tolerance: 0,
+        offset: 100,
+        classes: {
+            initial: "initial",
+            pinned: "pinned",
+            unpinned: "unpinned"
+        }
+    });
     #end
     var header = new Headroom(document.getElementById("header"), {
         tolerance: 10,
-        offset : 80,
+        offset: 80,
         classes: {
             initial: "animated",
             pinned: "slideDown",
