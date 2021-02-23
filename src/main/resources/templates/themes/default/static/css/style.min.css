@@ -28,8 +28,8 @@ html {
 }
 
 ::selection {
-    color: #fff;
-    background-color: #eb5055
+    color: #FFF;
+    background: #b6e855;
 }
 
 body {
@@ -40,7 +40,8 @@ body {
     color: #313131;
     text-rendering: geometricPrecision;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
+    -moz-osx-font-smoothing: grayscale;
+    cursor: url(../img/mouse.cur),url(../img/mouse.cur),auto;
 }
 
 body > :first-child {
@@ -2426,3 +2427,4 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     -webkit-animation: float 2s linear infinite;
     animation: float 2s linear infinite;
 }
+
