@@ -724,7 +724,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     padding: 15px;
     align-items: center
 }
-/*div hover放大缩小*/
+/*div 鼠标移过放大缩小*/
 .post-list-item-container {
     position: relative;
     overflow: hidden;
